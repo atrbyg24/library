@@ -1,0 +1,20 @@
+:root {
+    --sidebar-color: rgb(254, 184, 70);
+    --main-color: rgb(255, 218, 194);
+    --table-heading: rgb(255, 93, 18);
+    --table-row-odd: rgb(244,4,4);
+    --table-row-even: rgb(244,5,4);
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.sidebar {
+    background-color: var(--sidebar-color);
+}
+
+.library {
+    background-color: var(--main-color);
+}
