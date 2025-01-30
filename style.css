@@ -16,6 +16,7 @@ body {
 
 .sidebar {
     background-color: var(--sidebar-color);
+    padding: 16px;
 }
 
 .logo {
@@ -23,6 +24,8 @@ body {
     align-items: center;
     font-size: 60px;
     font-family: "Beau Rivage";
+    font-weight: bold;
+    color: var(--table-heading);
 }
 
 .logo > img {
