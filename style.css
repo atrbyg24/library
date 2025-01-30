@@ -1,18 +1,32 @@
+@import url(https://fonts.bunny.net/css?family=beau-rivage:400);
+
 :root {
     --sidebar-color: rgb(254, 184, 70);
     --main-color: rgb(255, 218, 194);
     --table-heading: rgb(255, 93, 18);
-    --table-row-odd: rgb(244,4,4);
-    --table-row-even: rgb(244,5,4);
+    --table-row-odd: rgb(238, 163, 71);
+    --table-row-even: rgb(250, 186, 103);
 }
 
 body {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 240px 1fr;
+    height: 100vh;
 }
 
 .sidebar {
     background-color: var(--sidebar-color);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 60px;
+    font-family: "Beau Rivage";
+}
+
+.logo > img {
+    width: 60px;
 }
 
 .library {
