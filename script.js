@@ -5,10 +5,13 @@ function Book(title, author, pages, readStatus) {
     this.author = author;
     this.pages = pages;
     this.readStatus = readStatus;
-
 }
 
 function addBookToLibrary(title, author,pages,readStatus) {
     let newBook = new Book(title,author,pages,readStatus);
     myLibrary.push(newBook);
+}
+
+function displayBooks() {
+
 }
