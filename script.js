@@ -38,14 +38,28 @@ function displayBooks(myLibrary) {
         readStatusButton.type = "button";
         readStatusButton.classList.add(book.readStatus ? "read-button" : "not-read-button");
         readStatusButton.textContent = book.readStatus ? "Read" : "Not Read";
+        readStatusButton.dataset.bookId = index;
         bookReadStatus.append(readStatusButton);
+
+        readStatusButton.addEventListener("click", (e) => {
+            const bookId = e.target.dataset.bookId;
+            myLibrary[bookId].toggleRead();
+            displayBooks(myLibrary);
+        })
 
         const bookDelete = document.createElement("td");
         const deleteButton = document.createElement("img");
         deleteButton.id = "delete-icon";
         deleteButton.src = "delete.svg";
         deleteButton.alt = "Delete button icon";
+        deleteButton.dataset.bookId = index;
         bookDelete.append(deleteButton);
+
+        deleteButton.addEventListener("click", (e) => {
+            const bookId = e.target.dataset.bookId;
+            myLibrary.splice(bookId,1);
+            displayBooks(myLibrary);
+        })
 
         bookRow.append(bookTitle);
         bookRow.append(bookAuthor);
@@ -54,6 +68,7 @@ function displayBooks(myLibrary) {
         bookRow.append(bookDelete);
 
         tableBody.append(bookRow);
+
     }
 }
 
