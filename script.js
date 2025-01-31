@@ -95,7 +95,7 @@ addBookBtn.addEventListener("click", (e) => {
 
 addBookToLibrary("The Catcher in the Rye","J.D. Salinger",288,true);
 addBookToLibrary("1984","George Orwell",320,true);
-addBookToLibrary("War and Peace","LEo Tolstoy",1200,false);
+addBookToLibrary("War and Peace","Leo Tolstoy",1200,false);
 addBookToLibrary("Great Expectations","Charles Dickens",685,true);
 addBookToLibrary("To Kill a MockingBird","Harper Lee",323,true);
 addBookToLibrary("Brave New World","Aldous Huxley",239,false);
