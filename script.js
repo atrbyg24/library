@@ -93,10 +93,10 @@ addBookBtn.addEventListener("click", (e) => {
     displayBooks(myLibrary);
 })
 
-addBookToLibrary("To Kill a MockingBird","Harper E. Lee",234,true);
-addBookToLibrary("One Fish, Two Fish","Dr. Seuss",40,true);
-addBookToLibrary("To Kill a MockingBird","Harper E. Lee",234,false);
-addBookToLibrary("One Fish, Two Fish","Dr. Seuss",40,true);
-addBookToLibrary("To Kill a MockingBird","Harper E. Lee",234,true);
-addBookToLibrary("One Fish, Two Fish","Dr. Seuss",40,true);
+addBookToLibrary("The Catcher in the Rye","J.D. Salinger",288,true);
+addBookToLibrary("1984","George Orwell",320,true);
+addBookToLibrary("War and Peace","LEo Tolstoy",1200,false);
+addBookToLibrary("Great Expectations","Charles Dickens",685,true);
+addBookToLibrary("To Kill a MockingBird","Harper Lee",323,true);
+addBookToLibrary("Brave New World","Aldous Huxley",239,false);
 displayBooks(myLibrary);
