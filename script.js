@@ -32,13 +32,26 @@ function displayBooks(myLibrary) {
         bookAuthor.textContent = book.author;
         const bookPages = document.createElement("td");
         bookPages.textContent = book.pages;
+
         const bookReadStatus = document.createElement("td");
-        bookReadStatus.textContent = book.readStatus ? "Read" : "Not Read";
+        const readStatusButton = document.createElement("button");
+        readStatusButton.type = "button";
+        readStatusButton.classList.add(book.readStatus ? "read-button" : "not-read-button");
+        readStatusButton.textContent = book.readStatus ? "Read" : "Not Read";
+        bookReadStatus.append(readStatusButton);
+
+        const bookDelete = document.createElement("td");
+        const deleteButton = document.createElement("img");
+        deleteButton.id = "delete-icon";
+        deleteButton.src = "delete.svg";
+        deleteButton.alt = "Delete button icon";
+        bookDelete.append(deleteButton);
 
         bookRow.append(bookTitle);
         bookRow.append(bookAuthor);
         bookRow.append(bookPages);
         bookRow.append(bookReadStatus);
+        bookRow.append(bookDelete);
 
         tableBody.append(bookRow);
     }
@@ -46,7 +59,7 @@ function displayBooks(myLibrary) {
 
 addBookToLibrary("To Kill a MockingBird","Harper E. Lee",234,true);
 addBookToLibrary("One Fish, Two Fish","Dr. Seuss",40,true);
-addBookToLibrary("To Kill a MockingBird","Harper E. Lee",234,true);
+addBookToLibrary("To Kill a MockingBird","Harper E. Lee",234,false);
 addBookToLibrary("One Fish, Two Fish","Dr. Seuss",40,true);
 addBookToLibrary("To Kill a MockingBird","Harper E. Lee",234,true);
 addBookToLibrary("One Fish, Two Fish","Dr. Seuss",40,true);
