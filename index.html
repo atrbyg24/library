@@ -13,15 +13,15 @@
         <div class="logo">
             <img src="bookshelf.svg" alt="Bookshelf icon"> Library
         </div>
-        <form>
+        <form action="" method="post">
             <fieldset class="book-info">
                 <legend>Book information</legend>
                 <label for="title" >Title: <span aria-label="required">*</span></label>
-                <input type="text" id="title" placeholder="Book title" required>
+                <input type="text" id="title" placeholder="Book title" autocomplete="off" required>
                 <label for="author">Author: <span aria-label="required">*</span></label>
-                <input type="text" id="author" placeholder="Author name" required>
+                <input type="text" id="author" autocomplete="off" placeholder="Author name" required>
                 <label for="pages">Pages: <span aria-label="required">*</span></label>
-                <input type="number" id="pages" placeholder="Number > 0" min=1 required>
+                <input type="number" id="pages" autocomplete="off" placeholder="Number > 0" min=1 required>
             </fieldset>
             <fieldset class="read-status-radio">
                 <legend>Have you read it?</legend>

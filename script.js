@@ -5,10 +5,11 @@ function Book(title, author, pages, readStatus) {
     this.author = author;
     this.pages = pages;
     this.readStatus = readStatus;
-    this.info = function () {
+
+    Book.prototype.info = function () {
         return `${this.title} by ${this.author}, ${this.pages}, ${this.readStatus ? "Read" : "Not Read"}`;
     }
-    this.toggleRead = function () {
+    Book.prototype.toggleRead = function () {
         this.readStatus = !this.readStatus;
         return this.readStatus;
     }
@@ -71,6 +72,26 @@ function displayBooks(myLibrary) {
 
     }
 }
+
+const addBookBtn = document.querySelector(".add-book");
+addBookBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    let title = document.querySelector("#title").value;
+    let author = document.querySelector("#author").value;
+    let pages = document.querySelector("#pages").value;
+    let readTrue = document.querySelector("#read-true").checked;
+    let readFalse = document.querySelector("#read-false").checked;
+
+    if (!title || !author || isNaN(pages) || pages <= 0 || (!readTrue && !readFalse)) {
+        alert("Please fill out all fields correctly.");
+        return;
+    }
+    addBookToLibrary(title,author,pages,readTrue);
+    const form = document.querySelector("form");
+    form.reset();
+    displayBooks(myLibrary);
+})
 
 addBookToLibrary("To Kill a MockingBird","Harper E. Lee",234,true);
 addBookToLibrary("One Fish, Two Fish","Dr. Seuss",40,true);
