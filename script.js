@@ -1,17 +1,51 @@
-const myLibrary = [];
+const myLibrary = []
 
-function Book(title, author, pages, readStatus) {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.readStatus = readStatus;
+class Book {
+    constructor(title, author, pages, readStatus) {
+        this._title = title;
+        this._author = author;
+        this._pages = pages;
+        this._readStatus = readStatus;    
+    }
 
-    Book.prototype.info = function () {
+    get title() {
+        return this._title;
+    }
+
+    set title(value) {
+        this._title = value;
+    }
+
+    get author() {
+        return this._author;
+    }
+
+    set author(value) {
+        this._author = value;
+    }
+
+    get pages() {
+        return this._pages;
+    }
+
+    set pages(value) {
+        this._pages = value;
+    }
+
+    get readStatus() {
+        return this._readStatus;
+    }
+
+    set readStatus(value) {
+        return this._readStatus;
+    }
+   
+    info() {
         return `${this.title} by ${this.author}, ${this.pages}, ${this.readStatus ? "Read" : "Not Read"}`;
     }
-    Book.prototype.toggleRead = function () {
-        this.readStatus = !this.readStatus;
-        return this.readStatus;
+   toggleRead() {
+        this._readStatus = !this._readStatus;
+        return this._readStatus;
     }
 }
 
